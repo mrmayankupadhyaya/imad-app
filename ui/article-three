@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            Article Three | Mayank Upadhyaya
+        </title>
+    </head>
+    <body>
+        <div>
+            <a href='/'>Home</a>
+        </div>
+        <hr/>
+        <h3>
+            Article Three
+        </h3>
+        <div>
+            Aug 9, 2017
+        </div>
+        <div>
+            <p>
+                This is the content for my third article.
+            </div>
+    </body>
+</html>
