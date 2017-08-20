@@ -86,19 +86,14 @@ function createTemplate (data) {
                 </ul>
                 </div>
                 <script>
-                    /// submit comment
                     var submit_comment = document.getElementById('comment_btn');
                     submit_comment.onclick = function () {
                       
-                    // make req to server and send the comment
-                    // create a request object
                     var request = new XMLHttpRequest();
                     
-                    // capture the response and store in variable
                     request.onreadystatechange = function () {
                         if (request.readyState === XMLHttpRequest.DONE) {
                             if (request.status === 200) {
-                      // capture a list of comment and render as list
                       var comments = request.responseText;
                       comments = JSON.parse(comments);
                       var list = '';
@@ -113,7 +108,6 @@ function createTemplate (data) {
                     
                     var commentInput = document.getElementById('comment');
                     var comment = commentInput.value;
-                    // make the request
                     request.open('GET', 'http://mrmayankupadhyaya.imad.hasura-app.io/submit-comment?comment=' + comment, true);
                     request.send(null);
                     };
