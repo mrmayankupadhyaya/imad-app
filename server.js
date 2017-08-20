@@ -102,6 +102,16 @@ app.get('/counter', function (req, res) {
    res.send(counter.toString());
 });
 
+var comments = [];
+app.get('/submit-comment', function (req, res) { // URL: /submit-comment?comment=xxxxx
+   // get the comment from request
+   var comment = req.query.comment; 
+   comments.push(comment);
+   // JSON - Javascript Object Notation
+   res.send(JSON.stringify(comments));
+   
+});
+
 var names = [];
 app.get('/submit-name', function (req, res) { // URL: /submit-name?name=xxxxx
    // get the name from request
