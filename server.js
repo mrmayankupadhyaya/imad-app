@@ -80,9 +80,9 @@ function createTemplate (data) {
                 </div>
                 <div class="footer">
                 <hr/>
-                <input type="text"  id="name" placeholder="name"></input>
-                <input type="submit" value="Submit Comments" id="submit_btn"></input>
-                <ul id="namelist">
+                <input type="text"  id="comment" placeholder="comment"></input>
+                <input type="submit" value="Submit Comments" id="comment_btn"></input>
+                <ul id="commentlist">
                 </ul>
                 </div>
         </body>
