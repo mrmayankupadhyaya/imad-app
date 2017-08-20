@@ -37,7 +37,7 @@ request.onreadystatechange = function () {
         if (request.status === 200) {
   // capture a list of comment and render as list
   var comments = request.responseText;
-  names = JSON.parse(comments);
+  comments = JSON.parse(comments);
   var list = '';
   for (var i=0; i< comments.length; i++) {
     list += '<li>' + comments[i] + '</li>';  
