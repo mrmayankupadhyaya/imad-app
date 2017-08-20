@@ -24,8 +24,8 @@ request.send(null);
 };
 
 // submit comment
-var comment = document.getElementById('comment_btn');
-comment.onclick = function () {
+var submit_comment = document.getElementById('comment_btn');
+submit_comment.onclick = function () {
   
   // make req to server and send the comment
 // create a request object
@@ -38,12 +38,12 @@ request.onreadystatechange = function () {
   // capture a list of comment and render as list
   var comments = request.responseText;
   names = JSON.parse(comments);
-  var list_c = '';
+  var list = '';
   for (var i=0; i< comments.length; i++) {
-    list_c += '<li>' + comments[i] + '</li>';  
+    list += '<li>' + comments[i] + '</li>';  
   }
   var ul = document.getElementById('commentlist');
-  ul.innerHTML = list_c;
+  ul.innerHTML = list;
         }
     }
 };
@@ -56,6 +56,7 @@ request.send(null);
   
     
 };
+
 // submit name
 var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
